@@ -38,6 +38,26 @@
  margin-top: 5px;
 
 }
+#login_block,
+#register_block {
+
+  position: relative;
+  margin-top: 100px;
+  width: 100%;
+  height: 550px;
+
+}
+
+#header .login  {
+  margin-top: 5px;
+  margin-left: 25px;
+ }
+
+ #header .logout  {
+  margin-top: 10px;
+  margin-left: 25px;
+ }
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -154,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-transparent {
-  background: transparent;
+  /* background: transparent; */
 }
 
 #header.header-scrolled {

@@ -12,7 +12,7 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Главная</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="/index.php">Главная</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="#">Личный кабинет</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="#">О нас</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="#">Проекты</a></li>

@@ -1,0 +1,7 @@
+#table{
+    position: absolute;
+    display: block;
+    /* width: 600px; */
+    outline: 2px solid red;
+
+}

@@ -25,10 +25,10 @@
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/css/new.css">
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
+  <link href="assets/css/new.css">
   <!-- =======================================================
   * Template Name: BizPage - v3.1.0
   * Template URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
@@ -74,8 +74,8 @@
           <h3 class="section-title">ЛИЧНЫЙ КАБИНЕТ</h3>
         </header>
         
-          <div id="table">
-            <table class="table">
+          <div id="block">
+            <table class="block-1">
               <thead>
                 <tr>
                   <th scope="col">#</th>
@@ -85,7 +85,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr class="m-3" style="line-height:50px">
                   <th scope="row">1</th>
                   <td>Mark</td>
                   <td>Otto</td>
@@ -103,8 +103,33 @@
                   <td>the Bird</td>
                   <td>@twitter</td>
                 </tr>
+                <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
               </tbody>
-            </table>
+            </table> 
+            <div class="block-2">
+
+            </div>
+            
+          
+          </div>
+            
+
+          
+
           </div>
         
 

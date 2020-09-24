@@ -1,5 +1,6 @@
 <?php 
   include 'parts/header.php';
+  $page = "home";
  ?>
 
 
@@ -36,7 +37,7 @@
                 <h2 class="animate__animated animate__fadeInDown">ВИРТУАЛЬНАЯ РЕАЛЬНОСТЬ</h2>
                 <div class="row">
                   <div class="col">
-                    <p class="animate__animated animate__fadeInUp">Технологии виртуальной реальности позволяют потребителю получить уникальный опыт полного и глубокого погружения в иную пространственную реальность. Все зависит от правильного контента, который демонстрируется при помощи специального оборудования и, непосредственно, качества данного оборудования.</p>
+                    <p class="animate__animated animate__fadeInUp">Созданный техническими средствами мир, передаваемый человеку через его ощущения: зрение, слух, осязание и другие. Виртуальная реальность имитирует как воздействие, так и реакции на воздействие. Для создания убедительного комплекса ощущений реальности компьютерный синтез свойств и реакций виртуальной реальности производится в реальном времени.</p>
                   </div>
                   <div class="col">
                     <div class="embed-responsive embed-responsive-16by9">
@@ -48,7 +49,27 @@
               </div><!-- /.container -->
             </div> <!-- /.carousel-container -->
           </div> <!-- ./carousel-item -->
-
+          <div class="carousel-item" style="background-image: url(assets/img/intro-carousel/2.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">СМЕШАННАЯ РЕАЛЬНОСТЬ</h2>
+                <div class="row">
+                  <div class="col">
+                    <p class="animate__animated animate__fadeInUp">Смешанная реальность (англ. Mixed reality, MR), иногда называемая как гибридная реальность[1] (охватывает дополненную реальность и дополненную виртуальность), является следствием объединения реального и виртуальных миров для созданий новых окружений и визуализаций, где физический и цифровой объекты сосуществуют и взаимодействуют в реальном времени. Существует не только в реальном или виртуальном виде,[1] а как смесь реальной и виртуальной реальности, охватывает дополненную реальность и дополненную виртуальность.[</p>
+                  </div>
+                  <div class="col">
+                    <div class="embed-responsive embed-responsive-16by9">
+                    <video autoplay width="320" height="240" controls  loop>
+                        <source src="/assets/img/MX.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div> 
+                  </div>
+                </div>
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
+              </div><!-- /.container -->
+            </div> <!-- /.carousel-container -->
+          </div> <!-- ./carousel-item -->
         </div>
         <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>

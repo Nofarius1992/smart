@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>BizPage Bootstrap Template</title>
+  <title>SMART</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/favicon2.png" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -26,6 +26,8 @@
   <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
 
+  
+
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
   <link href="../assets/css/new.css" rel="stylesheet">
@@ -40,6 +42,18 @@
 
 <body>
 
+<!-- <?php 
+     
+           
+      if (isset($_COOKIE["polzovatel_id"])) {
+        $link = ("/personal.php");
+      } else {
+        $link = ("/index.php");
+        echo "<script>alert(\"Вы не авторизованы\");</script>";
+      
+        }
+      ?> -->
+
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top header-transparent">
     <div class="container-fluid">
@@ -51,15 +65,24 @@
 
           <nav class="nav-menu d-none d-lg-block">
             <ul>
-              <li class="active"><a href="/index.php">Главная</a></li>
-              <li><a href="/personal.php">Личный кабинет </a></li>
+              <li class="<?php if($page == "home"){ echo 'active';} ?>"><a  href="/index.php">Главная</a></li>
+              <li class="<?php if($page == "personal"){ echo 'active';} ?>"><a 
+              
+              <?php 
+                if (isset($_COOKIE["polzovatel_id"])) {
+                  $link = ("/personal.php");
+                  
+                } else {
+                  $link = ("/login.php");
+                  
+                  }
+                  
+                ?>
+              href="<?php echo $link ?>">Личный кабинет</a></li>
               <li><a href="#">О нас</a></li>
               <li><a href="#">Проекты</a></li>
               <li><a href="#">Контакты</a></li>
               
-
-
-
               <?php 
               include $_SERVER['DOCUMENT_ROOT'] ."/config/db.php";
                   //если cookie существует то пользователь авторизован то выводим кнопку выход если нет смотри строку 21
@@ -87,7 +110,11 @@
                   ?>
               <!-- <li><a href="/login.php">ВОЙТИ</a></li> -->
             </ul>
-            <?php 
+
+          </nav><!-- .nav-menu -->
+         
+        </div>
+             <?php 
 
                 if (isset($_COOKIE["polzovatel_id"])) {
 
@@ -107,9 +134,7 @@
                 }
 
                 }
-            ?>
-          </nav><!-- .nav-menu -->
-        </div>
+            ?>        
       </div>
 
     </div>

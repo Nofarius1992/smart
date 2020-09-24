@@ -28,6 +28,7 @@
 
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/new.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: BizPage - v3.1.0
@@ -60,7 +61,7 @@
 
 
               <?php 
-              include "config/db.php";
+              include $_SERVER['DOCUMENT_ROOT'] ."/config/db.php";
                   //если cookie существует то пользователь авторизован то выводим кнопку выход если нет смотри строку 21
                   if (isset($_COOKIE["polzovatel_id"])) {
 

@@ -6,3 +6,24 @@
     outline: 2px solid red;
 
 }
+
+#form-service {
+	padding-top: 150px;
+	background-color: #1111112b;
+}
+
+#btn-form {
+	height: 100px;
+	margin: 50px;
+}
+
+#btn-form button {
+	background-color: #397776cc;
+	font-size: 35px;
+	transition: 0.3s;
+}
+
+#btn-form button:hover {
+	background-color: #183fc3;
+
+}

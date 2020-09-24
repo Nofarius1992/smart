@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Сен 23 2020 г., 23:29
--- Версия сервера: 10.4.11-MariaDB
--- Версия PHP: 7.4.5
+-- Время создания: Сен 24 2020 г., 06:45
+-- Версия сервера: 10.4.13-MariaDB
+-- Версия PHP: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -45,8 +45,28 @@ CREATE TABLE `orders_3d` (
   `create_at` datetime NOT NULL DEFAULT current_timestamp(),
   `address` longtext NOT NULL,
   `user_name` varchar(255) NOT NULL,
-  `status` varchar(255) NOT NULL DEFAULT 'Новый'
+  `status` varchar(255) NOT NULL DEFAULT 'Новый',
+  `model` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `size_model` varchar(255) NOT NULL,
+  `scale` varchar(255) NOT NULL,
+  `accuracy` varchar(255) NOT NULL,
+  `material` varchar(255) NOT NULL,
+  `platform` varchar(255) NOT NULL,
+  `packaging` varchar(255) NOT NULL,
+  `file_modeles` varchar(255) NOT NULL,
+  `file_document` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `orders_3d`
+--
+
+INSERT INTO `orders_3d` (`id`, `user_id`, `service`, `create_at`, `address`, `user_name`, `status`, `model`, `description`, `size_model`, `scale`, `accuracy`, `material`, `platform`, `packaging`, `file_modeles`, `file_document`) VALUES
+(3, 0, '', '2020-09-24 06:40:52', '', '', 'Новый', 'to;', '', '', '', '', '', '', '', '', ''),
+(4, 1, '', '2020-09-24 06:52:50', '', '', 'Новый', 'в', '', '', '', '', '', '', '', '', ''),
+(5, 1, '', '2020-09-24 07:06:54', '', '', 'Новый', 'wer', '', '', '', '', '', '', '', '', ''),
+(6, 1, '', '2020-09-24 07:07:43', '', '', 'Новый', 'wer', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -150,7 +170,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT для таблицы `orders_3d`
 --
 ALTER TABLE `orders_3d`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT для таблицы `orders_vr`

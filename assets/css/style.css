@@ -7,11 +7,13 @@
 /*--------------------------------------------------------------
 # My
 --------------------------------------------------------------*/
+
+
 #first {
   position: relative;
   margin: 0 auto;
   height: 900px;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 
 #first .first{
@@ -19,7 +21,7 @@
   margin: 0 auto;
   width: 80%;
   height: 95%;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
   margin-top: 100px;
 }
 #first .first-block-0{
@@ -28,7 +30,7 @@
   margin: 0 auto;
   width: 99%;
   height: 10%;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
   float: left;
   left: 5px;
 }
@@ -38,7 +40,7 @@
   margin: 0 auto;
   width: 33%;
   height: 65%;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
   float: left;
   left: 5px;
 }
@@ -54,7 +56,7 @@
   margin: 5px 5px 5px 5px;
   width: 98%;
   height: 95%;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
   float: left;
 }
 

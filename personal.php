@@ -17,20 +17,37 @@
               <thead>
                 <h4></h4>
                 <tr>
-                  <th scope="col">#</th>
+                  <th scope="col">ID</th>
                   <th scope="col">ТЕХНОЛОГИЯ</th>
+                  <th scope="col">ОБОРУДОВАНИЕ</th>
                   <th scope="col">СТАТУС</th>
                   <th scope="col">ДЕТАЛИ</th>
                 </tr>
               </thead>
               <tbody>
+              <?php
+              $sql = "SELECT * FROM `orders_vr` WHERE `user_id` = '" . $_COOKIE['polzovatel_id'] . "' ";
+              $result = $conn->query($sql);   
+              // var_dump($sql);
+              while ($row = mysqli_fetch_assoc($result)) {
+                ?>
                 <tr class="m-3" style="line-height:50px">
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
+                  <th >
+                  <?php echo $row['id'] ?>
+                  </th>
+                  <th >
+                  <?php echo $row['category_id'] ?>
+                  </th>
+                  <td>
+                  <?php echo $row['equi'] ?>
+                  </td>
+                  <td><?php echo $row['status'] ?></td>
                   <td>@mdo</td>
                 </tr>
-                
+                <?php
+                      }
+
+                      ?>
               </tbody>
             </table> 
             <div class="block-2">

@@ -26,7 +26,7 @@
                     </div> 
                   </div>
                 </div>
-                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
+                <a href="/services/service-3d.php?category_id=1" class="btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
               </div><!-- /.container -->
             </div> <!-- /.carousel-container -->
           </div> <!-- ./carousel-item -->
@@ -45,7 +45,7 @@
                     </div> 
                   </div>
                 </div>
-                <a href="/reality.php" class="btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
+                <a href="/services/service-vr.php?category_id=2" class="btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
               </div><!-- /.container -->
             </div> <!-- /.carousel-container -->
           </div> <!-- ./carousel-item -->
@@ -66,7 +66,7 @@
                     </div> 
                   </div>
                 </div>
-                <a href="/services/reality.php" class="btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
+                <a href="/services/service-vr.php?category_id=3" class="btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
               </div><!-- /.container -->
             </div> <!-- /.carousel-container -->
           </div> <!-- ./carousel-item -->

@@ -1,7 +1,7 @@
 <?php 
 	include $_SERVER['DOCUMENT_ROOT'] ."/parts/header.php";
 
-	include $_SERVER['DOCUMENT_ROOT'] ."/modules/services/order-3d";
+	include $_SERVER['DOCUMENT_ROOT'] ."/modules/services/order-3d.php";
 ?>
 
 

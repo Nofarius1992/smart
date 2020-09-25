@@ -15,7 +15,7 @@
           <div class="carousel-item active" style="background-image: url(assets/img/intro-carousel/1.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">3D печать металлом в Украине</h2>
+                <h2 class="animate__animated animate__fadeInDown">3D ПЕЧАТЬ</h2>
                 <div class="row">
                   <div class="col">
                     <p class="animate__animated animate__fadeInUp">В Украине уже доступна 3D печать метталами по технологии выборочного лазерного спекания.</p>

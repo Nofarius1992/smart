@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Сен 25 2020 г., 00:12
--- Версия сервера: 10.4.11-MariaDB
--- Версия PHP: 7.4.5
+-- Время создания: Сен 25 2020 г., 20:23
+-- Версия сервера: 10.4.13-MariaDB
+-- Версия PHP: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,16 +29,18 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `categories` (
   `id` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL
+  `title` varchar(255) NOT NULL,
+  `category_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `categories`
 --
 
-INSERT INTO `categories` (`id`, `title`) VALUES
-(1, 'Виртуальная реальность'),
-(2, 'Дополненная реальность');
+INSERT INTO `categories` (`id`, `title`, `category_id`) VALUES
+(1, '3D Печать', 1),
+(2, 'Виртуальная реальность', 2),
+(5, 'Смешанная реальность', 3);
 
 -- --------------------------------------------------------
 
@@ -53,8 +55,30 @@ CREATE TABLE `orders_3d` (
   `create_at` datetime NOT NULL DEFAULT current_timestamp(),
   `address` longtext NOT NULL,
   `user_name` varchar(255) NOT NULL,
-  `status` varchar(255) NOT NULL DEFAULT 'Новый'
+  `status` varchar(255) NOT NULL DEFAULT 'Новый',
+  `model` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `size_model` varchar(255) NOT NULL,
+  `scale` varchar(255) NOT NULL,
+  `accuracy` varchar(255) NOT NULL,
+  `material` varchar(255) NOT NULL,
+  `platform` varchar(255) NOT NULL,
+  `packaging` varchar(255) NOT NULL,
+  `file_modeles` varchar(255) NOT NULL,
+  `file_document` varchar(255) NOT NULL,
+  `category_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `orders_3d`
+--
+
+INSERT INTO `orders_3d` (`id`, `user_id`, `service`, `create_at`, `address`, `user_name`, `status`, `model`, `description`, `size_model`, `scale`, `accuracy`, `material`, `platform`, `packaging`, `file_modeles`, `file_document`, `category_id`) VALUES
+(3, 0, '', '2020-09-24 06:40:52', '', '', 'Новый', 'to;', '', '', '', '', '', '', '', '', '', 0),
+(4, 1, '', '2020-09-24 06:52:50', '', '', 'Новый', 'в', '', '', '', '', '', '', '', '', '', 0),
+(5, 1, '', '2020-09-24 07:06:54', '', '', 'Новый', 'wer', '', '', '', '', '', '', '', '', '', 0),
+(6, 1, '', '2020-09-24 07:07:43', '', '', 'Новый', 'wer', '', '', '', '', '', '', '', '', '', 0),
+(7, 0, '', '2020-09-25 21:18:59', '', '', 'Новый', 'sdf', 'sdf', 'sdf', 'sdf', 'sdf', 'sdf', 'sdf', 'sdf', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -72,13 +96,6 @@ CREATE TABLE `orders_vr` (
   `location` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `orders_vr`
---
-
-INSERT INTO `orders_vr` (`id`, `equi`, `create_at`, `type_work`, `user_col`, `user_age`, `location`, `status`) VALUES
-(1, 'Виртуальная реальность', '2020-09-25 00:24:54', '', 0, 0, '', '');
 
 -- --------------------------------------------------------
 
@@ -115,7 +132,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `login`, `phone`, `email`, `password`, `confirm_mail`, `verified`) VALUES
-(1, 'qwerty', '', 'q@werty.ru', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'LuuW8I5tDqRJ6223eZim', 1);
+(1, 'qwerty', '', 'q@werty.ru', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'LuuW8I5tDqRJ6223eZim', 0);
 
 --
 -- Индексы сохранённых таблиц
@@ -159,19 +176,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблицы `orders_3d`
 --
 ALTER TABLE `orders_3d`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `orders_vr`
 --
 ALTER TABLE `orders_vr`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `services`

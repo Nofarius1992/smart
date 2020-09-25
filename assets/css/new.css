@@ -14,12 +14,13 @@
 
 #btn-form {
 	height: 100px;
-	margin: 50px;
+	margin-top: 12px;
 }
 
 #btn-form button {
 	background-color: #397776cc;
-	font-size: 35px;
+	font-size: 1.75rem;
+	padding: 15px;
 	transition: 0.3s;
 }
 

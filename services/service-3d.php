@@ -63,8 +63,8 @@
 
 		</div><!-- /.row -->
 
-		<div class="row text-center" id="btn-form">
-			<button type="submit" class="btn btn-primary btn-block btn-lg">Оформить заказ</button>
+		<div class="col-md-12 text-center" id="btn-form">
+			<button type="submit" class="btn btn-primary btn-sm">Оформить заказ</button>
 		</div>
 		
 	</form>

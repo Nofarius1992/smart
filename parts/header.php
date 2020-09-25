@@ -125,7 +125,7 @@
                 if ($result -> num_rows == 0) {
                   ?>
                   <div>
-                    <a class="Alert" href="/register_email.php" type="button">Вам не подтвердили совою почту</a>
+                    <a class="Alert" href="/register_email.php" type="button">Вы не подтвердили совою почту</a>
 
                   </div>
 

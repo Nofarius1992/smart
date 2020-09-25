@@ -12,61 +12,69 @@
         <div class="carousel-inner" role="listbox">
           
 
-          <div class="carousel-item active" style="background-image: url(assets/img/intro-carousel/1.jpg)">
+          <div class="carousel-item active" style="background-image: url(assets/img/intro-carousel/6.jpg)">
             <div class="carousel-container">
-              <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">3D ПЕЧАТЬ</h2>
+              <div class="container-fluid text-center">
+                <h2 class="animate__animated animate__fadeInDown mb-5">3D ПЕЧАТЬ</h2>
                 <div class="row">
-                  <div class="col">
-                    <p class="animate__animated animate__fadeInUp">В Украине уже доступна 3D печать метталами по технологии выборочного лазерного спекания.</p>
+                  <div class="col-md-5">
+                    <h5 style="color: white">Печать пластиком</h5>
+                    <p class="animate__animated animate__fadeInUp">Технология 3D-печати пластиком давно и успешно освоена специализированной компанией Easy3Dprint. Мастера используют различные виды сырья для создания макетов по эскизам клиентов. Недорогой материал и освоенная технология воссоздания трехмерных изделий позволяет печатать недорогие прототипы.</p>
+                    <h5 style="color: white">Печать металлом</h5>
+                    <p>3D-печать металлом становится все более популярной. И это не удивляет: каждый металлический материал для печати предлагает уникальное сочетание практических и эстетических свойств для того, чтобы удовлетворить требования предъявляемые к различным продуктам.</p>
                   </div>
-                  <div class="col">
+                  <div class="col-md-7">
                     <div class="embed-responsive embed-responsive-16by9">
                       <iframe src="https://www.youtube.com/embed/aNmJ2LFbWs0" class="embed-responsive-item" allowfullscreen></iframe>
                     </div> 
                   </div>
                 </div>
+
                 <a href="/services/service-3d.php?category_id=1" class="btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
+
               </div><!-- /.container -->
             </div> <!-- /.carousel-container -->
           </div> <!-- ./carousel-item -->
 
-           <div class="carousel-item" style="background-image: url(assets/img/intro-carousel/2.jpg)">
+           <div class="carousel-item" style="background-image: url(assets/img/intro-carousel/7.png)">
             <div class="carousel-container">
-              <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">ВИРТУАЛЬНАЯ РЕАЛЬНОСТЬ</h2>
+              <div class="container-fluid text-center">
+                <h2 class="animate__animated animate__fadeInDown mb-5">ВИРТУАЛЬНАЯ РЕАЛЬНОСТЬ</h2>
                 <div class="row">
-                  <div class="col">
+                  <div class="col-md-5">
                     <p class="animate__animated animate__fadeInUp">Созданный техническими средствами мир, передаваемый человеку через его ощущения: зрение, слух, осязание и другие. Виртуальная реальность имитирует как воздействие, так и реакции на воздействие. Для создания убедительного комплекса ощущений реальности компьютерный синтез свойств и реакций виртуальной реальности производится в реальном времени.</p>
                   </div>
-                  <div class="col">
+                  <div class="col-md-7">
                     <div class="embed-responsive embed-responsive-16by9">
                       <iframe src="https://www.youtube.com/embed/KWNZdfxXe20" class="embed-responsive-item" allowfullscreen></iframe>
                     </div> 
                   </div>
                 </div>
                 <a href="/services/service-vr.php?category_id=2" class="btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
+
               </div><!-- /.container -->
             </div> <!-- /.carousel-container -->
           </div> <!-- ./carousel-item -->
-          <div class="carousel-item" style="background-image: url(assets/img/intro-carousel/2.jpg)">
+          <div class="carousel-item" style="background-image: url(assets/img/intro-carousel/8.jpg)">
             <div class="carousel-container">
-              <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">СМЕШАННАЯ РЕАЛЬНОСТЬ</h2>
+              <div class="container-fluid text-center">
+                <h2 class="animate__animated animate__fadeInDown mb-5">СМЕШАННАЯ РЕАЛЬНОСТЬ</h2>
                 <div class="row">
-                  <div class="col">
+                  <div class="col-md-5">
                     <p class="animate__animated animate__fadeInUp">Смешанная реальность (англ. Mixed reality, MR), иногда называемая как гибридная реальность[1] (охватывает дополненную реальность и дополненную виртуальность), является следствием объединения реального и виртуальных миров для созданий новых окружений и визуализаций, где физический и цифровой объекты сосуществуют и взаимодействуют в реальном времени. Существует не только в реальном или виртуальном виде,[1] а как смесь реальной и виртуальной реальности, охватывает дополненную реальность и дополненную виртуальность.[</p>
                   </div>
-                  <div class="col">
+                  <div class="col-md-7">
                     <div class="embed-responsive embed-responsive-16by9">
-                    <video autoplay width="320" height="240" controls  loop>
+                      <video autoplay controls  loop>
                         <source src="/assets/img/MX.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
                     </div> 
                   </div>
                 </div>
+
                 <a href="/services/service-vr.php?category_id=3" class="btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
+
               </div><!-- /.container -->
             </div> <!-- /.carousel-container -->
           </div> <!-- ./carousel-item -->

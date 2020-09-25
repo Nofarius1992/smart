@@ -65,7 +65,7 @@
 
           <nav class="nav-menu d-none d-lg-block">
             <ul>
-              <li class="<?php if($page == "home"){ echo 'active';} ?>"><a  href="/index.php">Главная</a></li>
+              <li class="<?php if($page == "home"){ echo 'active';} ?>"><a  href="/#intro">Главная</a></li>
               <li class="<?php if($page == "personal"){ echo 'active';} ?>"><a 
               
               <?php 
@@ -79,9 +79,9 @@
                   
                 ?>
               href="<?php echo $link ?>">Личный кабинет</a></li>
-              <li><a href="#">О нас</a></li>
-              <li><a href="#">Проекты</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="/#about">О нас</a></li>
+              <li><a href="/#portfolio">Проекты</a></li>
+              <li><a href="/#team">Контакты</a></li>
               
               <?php 
               include $_SERVER['DOCUMENT_ROOT'] ."/config/db.php";

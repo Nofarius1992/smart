@@ -66,7 +66,7 @@
                     </div> 
                   </div>
                 </div>
-                <a href="/reality.php" class="btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
+                <a href="/services/reality.php" class="btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
               </div><!-- /.container -->
             </div> <!-- /.carousel-container -->
           </div> <!-- ./carousel-item -->

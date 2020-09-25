@@ -87,9 +87,8 @@
 #block {
   position: relative;
   margin: 0 auto;
-  left: -150px;
+  left: -275px;
   width: 150%;
-  height: 500px;
   outline: 2px solid red;
 }
 
@@ -100,6 +99,7 @@
   outline: 2px solid red;
   float: left;
   margin: 0 auto;
+
 }
 
 #block .block-2{

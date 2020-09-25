@@ -13,7 +13,7 @@
         </header>
         
           <div id="block">
-            <table class="block-1">
+            <table class="block-1 table table-striped">
               <thead>
                 <h4></h4>
                 <tr>
@@ -41,8 +41,8 @@
                   <td>
                   <?php echo $row['equi'] ?>
                   </td>
-                  <td><?php echo $row['status'] ?></td>
-                  <td>@mdo</td>
+                  <td><?php echo $row['status']?></td>
+                  <td><?php echo $row['status']?></td>
                 </tr>
                 <?php
                       }
@@ -79,10 +79,7 @@
             
           
           </div>
-            
-
-          
-
+ 
           </div>
           </div>
 

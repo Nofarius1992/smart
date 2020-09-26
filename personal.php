@@ -31,14 +31,14 @@
           </thead>
           <tbody>
           <?php
-          $sql = "SELECT * FROM `orders_vr` WHERE `user_id` = '" . $_COOKIE['polzovatel_id'] . "' ";
+          $sql = "SELECT * FROM `orders_vr` WHERE `user_id` = '" . $_COOKIE['polzovatel_id'] . "'ORDER BY `orders_vr`.`data_create` DESC";
           $result = $conn->query($sql);   
           // var_dump($sql);
           while ($row = mysqli_fetch_assoc($result)) {
             ?>
             <tr class="m-3 text-center" style="line-height:50px">
             <th >
-              <?php echo $row['category_id'] ?>
+              <?php echo $row['id'] ?>
               </th>
             <th >
               <?php 
@@ -82,7 +82,7 @@
                 <tbody>
                 <?php
 
-                $sql = "SELECT * FROM `orders_3D` WHERE `user_id` = '" . $_COOKIE['polzovatel_id'] . "' ";
+                $sql = "SELECT * FROM `orders_3D` WHERE `user_id` = '" . $_COOKIE['polzovatel_id'] . "' ORDER BY `orders_3d`.`create_at` DESC";
                 $result = $conn->query($sql);   
                 // var_dump($sql);
                 while ($row = mysqli_fetch_assoc($result)) {

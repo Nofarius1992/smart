@@ -19,6 +19,10 @@
 				    <label for="description">Описание и дополнительно пояснение</label>
 				    <input name="description" class="form-control" id="description">
 				  </div>
+				  <div class="form-group">
+				    <label for="description">Адрес доставки</label>
+				    <input name="address" class="form-control" id="description">
+				  </div>
 			</div>
 
 			<div class="col">

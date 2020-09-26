@@ -13,7 +13,7 @@
         </header>
         
           <div id="block">
-            <table class="block-1 table table-striped">
+            <table class="block-1 table table-striped "> 
               <thead>
                 <h4></h4>
                 <tr>
@@ -42,7 +42,8 @@
                   <?php echo $row['equi'] ?>
                   </td>
                   <td><?php echo $row['status']?></td>
-                  <td><?php echo $row['status']?></td>
+
+                  <td><a href="/services/service-vr.php?category_id=<?php echo $row['category_id'] ?>">смотреть</a></td>
                 </tr>
                 <?php
                       }

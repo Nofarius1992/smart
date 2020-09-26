@@ -5,7 +5,7 @@
 ?>
 
 
-<div class="container-fluid" id="form-service">
+<div class="container-fluid" id="form-service" style=" background-color: #fff; width: 1300px; margin-bottom: 100px;">
 	<form method="POST">
 		<div class="row">
 			<div class="col">

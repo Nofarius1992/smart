@@ -43,3 +43,44 @@
 	position:absolute;
 	}
 
+#form-text .text-dark-h3 {
+
+font-weight: 900;
+}
+
+#other img {
+	width: 6%;
+}
+
+#login_block .h4 {
+
+	text-align: center;
+}
+
+
+.my-custom-scrollbar {
+	position: relative;
+	height: 400px;
+	overflow: auto;
+	}
+	.table-wrapper-scroll-y {
+	display: block;
+	}
+	
+
+#block-main {
+	position: relative;
+    width: 1140px;
+	height: 1000px;
+	margin: 130px auto
+}
+#block-main .h4 {
+	font-weight: 900;
+	text-align: center;
+}
+
+#block-main h5 {
+
+	text-align: center;
+	margin-top: 20px;
+}

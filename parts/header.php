@@ -97,7 +97,7 @@
                         if($polzovatel_admin) {
                           ?>
 
-                              <li><a href="/admin"><strong>Admin</strong></a></li>
+                              <li><a href="/admin/modules/services.php"><strong>Admin</strong></a></li>
 
                           <?php
                         }  

@@ -6,17 +6,17 @@
 
           <div class="col-lg-3 col-md-6 footer-info">
             <h3>Smart</h3>
-            <p>Наш текст</p>
+            <p>Умные технологии в Вашу жизнь!</p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="ion-ios-arrow-right"></i> <a href="/index.php">Главная</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Личный кабинет</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">О нас</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Проекты</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Контакты</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="/#intro">Главная</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="<?php echo $link ?>">Личный кабинет</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="/#about">О нас</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="/#portfolio">Проекты</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="/#team">Контакты</a></li>
             </ul>
           </div>
 
@@ -26,7 +26,7 @@
               Россия <br>
               Санкт-Петербург<br>
               ул.Пестеля 11<br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Phone:</strong> +7 961 9996660<br>
               <strong>Email:</strong> info@example.com<br>
             </p>
 
@@ -42,7 +42,7 @@
 
           <div class="col-lg-3 col-md-6 footer-newsletter">
             <h4>О нас</h4>
-            <p>Продаем услуги по аренде очков виртуальной реальности. Делаем мелкие и крупные заказы по 3D печати из металла и пластика.</p>
+            <p class="text-justify">Наша компания начинала с 3D печати пластиковых форм для тестирования корпуса телефона. Наши заказчики, доверяя нам своё развитие, обеспечили себе использование технологий, которые мы предоставляем Вам. Наш опыт включает путь в 10 лет, 20 крупных заказчиков, 50 проектов.</p>
           </div>
 
         </div>

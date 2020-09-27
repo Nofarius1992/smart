@@ -124,9 +124,8 @@
             <div class="about-col">
               <div class="img">
                 <img src="assets/img/about-mission.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
               </div>
-              <h2 class="title"><a href="#">3D Print</a></h2>
+              <h2 class="title">3D Print</h2>
               <p>
                 Печатаем из любого материала, создаём макеты согласно пожеланиям заказчика или предлагаем уже готовые решения, даём в аренду оборудование для печати. 
               </p>
@@ -137,11 +136,10 @@
             <div class="about-col">
               <div class="img">
                 <img src="assets/img/about-plan.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-ios-list-outline"></i></div>
               </div>
-              <h2 class="title"><a href="#">Virtual Reality</a></h2>
+              <h2 class="title">Virtual Reality</h2>
               <p>
-                Виртуальная реальность 
+              Любая технология виртуальной реальности у Вас дома, на работе, в гостях или ещё </br>где-то! 
               </p>
             </div>
           </div>
@@ -150,11 +148,10 @@
             <div class="about-col">
               <div class="img">
                 <img src="assets/img/DR.jpeg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-ios-eye-outline"></i></div>
               </div>
-              <h2 class="title"><a href="#">Augmented Reality</a></h2>
+              <h2 class="title">Augmented Reality</h2>
               <p>
-                Дополненная реальность
+                Позволим Вам окружить материальный мир виртульными объектами и информацией, которые сделают жизнь более полной и красочней!
               </p>
             </div>
           </div>
@@ -191,13 +188,12 @@
           <div class="portfolio-wrap">
             <figure>
               <img src="assets/img/portfolio/app1.jpg" class="img-fluid" alt="">
-              <a href="assets/img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview"><i class="ion ion-eye"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              <a href="assets/img/portfolio/app1.jpg" data-gall="portfolioGallery" data-lightbox="portfolio" data-title="App 1" class="link-preview venobox"><i class="ion ion-eye"></i></a>
             </figure>
 
             <div class="portfolio-info">
-              <h4><a href="portfolio-details.html">App 1</a></h4>
-              <p>App</p>
+              <h4>Бесконечность</h4>
+              <p>3D</p>
             </div>
           </div>
         </div>
@@ -207,12 +203,11 @@
             <figure>
               <img src="assets/img/portfolio/web3.jpg" class="img-fluid" alt="">
               <a href="assets/img/portfolio/web3.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Web 3"><i class="ion ion-eye"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
             </figure>
 
             <div class="portfolio-info">
-              <h4><a href="portfolio-details.html">Web 3</a></h4>
-              <p>Web</p>
+              <h4>Конструкторское бюро</h4>
+              <p>AR</p>
             </div>
           </div>
         </div>
@@ -222,12 +217,11 @@
             <figure>
               <img src="assets/img/portfolio/app2.jpg" class="img-fluid" alt="">
               <a href="assets/img/portfolio/app2.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="App 2"><i class="ion ion-eye"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
             </figure>
 
             <div class="portfolio-info">
-              <h4><a href="portfolio-details.html">App 2</a></h4>
-              <p>App</p>
+              <h4>Кольца</h4>
+              <p>3D</p>
             </div>
           </div>
         </div>
@@ -237,12 +231,11 @@
             <figure>
               <img src="assets/img/portfolio/card2.jpg" class="img-fluid" alt="">
               <a href="assets/img/portfolio/card2.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Card 2"><i class="ion ion-eye"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
             </figure>
 
             <div class="portfolio-info">
-              <h4><a href="portfolio-details.html">Card 2</a></h4>
-              <p>Card</p>
+              <h4>Обучающий курс</h4>
+              <p>VR</p>
             </div>
           </div>
         </div>
@@ -252,12 +245,11 @@
             <figure>
               <img src="assets/img/portfolio/web2.jpg" class="img-fluid" alt="">
               <a href="assets/img/portfolio/web2.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Web 2"><i class="ion ion-eye"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
             </figure>
 
             <div class="portfolio-info">
-              <h4><a href="portfolio-details.html">Web 2</a></h4>
-              <p>Web</p>
+              <h4>Дизайн помещений</h4>
+              <p>AR</p>
             </div>
           </div>
         </div>
@@ -267,12 +259,11 @@
             <figure>
               <img src="assets/img/portfolio/app3.jpg" class="img-fluid" alt="">
               <a href="assets/img/portfolio/app3.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="App 3"><i class="ion ion-eye"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
             </figure>
 
             <div class="portfolio-info">
-              <h4><a href="portfolio-details.html">App 3</a></h4>
-              <p>App</p>
+              <h4>Колонка</h4>
+              <p>3D</p>
             </div>
           </div>
         </div>
@@ -282,12 +273,11 @@
             <figure>
               <img src="assets/img/portfolio/card1.jpg" class="img-fluid" alt="">
               <a href="assets/img/portfolio/card1.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Card 1"><i class="ion ion-eye"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
             </figure>
 
             <div class="portfolio-info">
-              <h4><a href="portfolio-details.html">Card 1</a></h4>
-              <p>Card</p>
+              <h4>Скалолазы</h4>
+              <p>VR</p>
             </div>
           </div>
         </div>
@@ -297,12 +287,11 @@
             <figure>
               <img src="assets/img/portfolio/card3.jpg" class="img-fluid" alt="">
               <a href="assets/img/portfolio/card3.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Card 3"><i class="ion ion-eye"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
             </figure>
 
             <div class="portfolio-info">
-              <h4><a href="portfolio-details.html">Card 3</a></h4>
-              <p>Card</p>
+              <h4>Автошкола</h4>
+              <p>VR</p>
             </div>
           </div>
         </div>
@@ -312,12 +301,11 @@
             <figure>
               <img src="assets/img/portfolio/web1.jpg" class="img-fluid" alt="">
               <a href="assets/img/portfolio/web1.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Web 1"><i class="ion ion-eye"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
             </figure>
 
             <div class="portfolio-info">
-              <h4><a href="portfolio-details.html">Web 1</a></h4>
-              <p>Web</p>
+              <h4>Автоматизация диспетчера</h4>
+              <p>AR</p>
             </div>
           </div>
         </div>

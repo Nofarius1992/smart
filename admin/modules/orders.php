@@ -17,7 +17,6 @@ $page = "orders";
               <div class="card-body">
                       <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                          <li class="breadcrumb-item"><a href="/admin/index.php">Home</a></li>
                           <li class="breadcrumb-item active" aria-current="page">Заказы</li>
                         </ol>
                       </nav>

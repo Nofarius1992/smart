@@ -42,6 +42,10 @@
 
 <body>
 
+  <?php 
+    include $_SERVER['DOCUMENT_ROOT'] ."/config/db.php";
+   ?>
+
 <!-- <?php 
      
            
@@ -82,9 +86,23 @@
               <li><a href="/#about">О нас</a></li>
               <li><a href="/#portfolio">Проекты</a></li>
               <li><a href="/#team">Контакты</a></li>
-              
               <?php 
-              include $_SERVER['DOCUMENT_ROOT'] ."/config/db.php";
+              
+                  //если cookie существует то пользователь авторизован то выводим кнопку выход если нет смотри строку 21
+                  if (isset($_COOKIE["polzovatel_id"])) {
+
+                        $sql = "SELECT * FROM `users` WHERE `id` = " . $_COOKIE["polzovatel_id"] . " AND `admin_param` = 'Admin'";
+                        $result = $conn->query($sql);
+                        $polzovatel_admin = mysqli_fetch_assoc($result);
+                        if($polzovatel_admin) {
+                          ?>
+
+                              <li><a href="/admin"><strong>Admin</strong></a></li>
+
+                          <?php
+                        }  
+                  }
+              
                   //если cookie существует то пользователь авторизован то выводим кнопку выход если нет смотри строку 21
                   if (isset($_COOKIE["polzovatel_id"])) {
 

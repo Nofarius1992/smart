@@ -18,31 +18,21 @@ $page = "products";
                       <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="/admin/index.php">Home</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Продукт</li>
+                          <li class="breadcrumb-item active" aria-current="page">Услуги</li>
                         </ol>
                       </nav>
                   <div >
-                  <a href="create.php" type="button" class="btn btn-secondary">Создать товар</a>  
-                  <a href="add_cat.php" type="button" class="btn btn-secondary">Создать категорию</a>  
+                  <a href="create.php" type="button" class="btn btn-secondary">Создать услугу</a>   
                   </div>
                 <div class="table" >
                 <div class="form-row">
                   <table class="table">
                     <thead class=" text-primary">
                       <th>
-                        ID
-                      </th>
-                      <th>
-                        Имя
+                        Название услуги
                       </th>
                       <th>
                         Описание
-                      </th>
-                       <th>
-                        Полное описание
-                      </th>
-                      <th>
-                        Категория
                       </th>
                       <th >
                         Опции
@@ -50,33 +40,22 @@ $page = "products";
                     </thead>
                     <tbody>
                       <?php
-                      $sql = "SELECT * FROM products";
+                      $sql = "SELECT * FROM services";
                       $result = $conn->query($sql);   
-                      // var_dump($sql);
                       while ($row = mysqli_fetch_assoc($result)) { 
                       ?>
                         <tr>
-                          <td style="width: 30px;">
-                            <?php echo $row['id'] ?>
-                          </td>
-                          <td style="width: 50px;">
+                          <td style="max-width: 200px;">
                             <?php echo $row['title'] ?>
                           </td>
-                          <td style="width: 170px;">
-                            <?php echo $row['disc_short'] ?>
-                          </td>
-                            <td style="width: 600px;">
-                            <?php echo $row['disc_long'] ?>
+                          <td style="max-width: 900px;">
+                            <?php echo $row['description'] ?>
                           </td>
                           <td>
-                            <?php echo $row['category_id'] ?></td>
-                          <td >
-                            <div>
-                              <a href="edit.php?id=<?php echo $row['id'] ?>" type="button" class="btn btn-secondary">EDIT</a>
+                             <a href="edit.php?id=<?php echo $row['id'] ?>" type="button" class="btn btn-secondary">EDIT</a>
                               <a href="delete.php?id=<?php echo $row['id'] ?>" name="del"  type="button" class="btn btn-secondary">DEL</a>
-                            
-                            </div>
                           </td>
+                        </tr>
                       <?php
                       }
 

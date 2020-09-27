@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="/admin/assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="/admin/assets/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon2.png">
+  <link rel="icon" type="image/png" href="/assets/img/favicon2.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    BEE Admin panel
+    SMART Admin panel
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -26,12 +26,12 @@
       <div class="logo">
         <a href="../../index.php" class="simple-text logo-mini">
           <div class="logo-image-small">
-            <img src="/images/logo.png">
+            <img src="/assets/img/favicon2.png">
           </div>
           <!-- <p>CT</p> -->
         </a>
         <a href="../../index.php" class="simple-text logo-normal">
-          BEE
+          SMART
           <!-- <div class="logo-image-big">
             <img src="assets/img/logo-big.png">
           </div> -->

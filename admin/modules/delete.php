@@ -1,13 +1,11 @@
 <?php 
 include $_SERVER['DOCUMENT_ROOT']."/config/db.php";
 
-
-var_dump("TEST");
-
 if (isset($_GET["id"])){
-    $sql = "DELETE FROM `products` WHERE `products`.`id` = '" . $_GET["id"] . "'";
+    $sql = "DELETE FROM `services` WHERE `services`.`id` = '" . $_GET["id"] . "'";
 
     $result = $conn->query($sql);
-header("location:./products.php");
+	echo "<script>alert(\"Услуга удалена\");</script>";
+    echo "<meta http-equiv='refresh' content='0; url=http://smart.local/admin/modules/services.php'>";
 }
 ?>

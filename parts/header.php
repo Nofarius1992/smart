@@ -91,7 +91,7 @@
                   //если cookie существует то пользователь авторизован то выводим кнопку выход если нет смотри строку 21
                   if (isset($_COOKIE["polzovatel_id"])) {
 
-                        $sql = "SELECT * FROM `users` WHERE `id` = " . $_COOKIE["polzovatel_id"] . " AND `admin_param` = 1";
+                        $sql = "SELECT * FROM `users` WHERE `id` = " . $_COOKIE["polzovatel_id"] . " AND `admin_param` = 'Admin'";
                         $result = $conn->query($sql);
                         $polzovatel_admin = mysqli_fetch_assoc($result);
                         if($polzovatel_admin) {

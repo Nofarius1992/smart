@@ -406,30 +406,7 @@
 
         </div>
 
-        <div class="form">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Ваше имя" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validate"></div>
-              </div>
-              <div class="form-group col-md-6">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Ваша почта" data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validate"></div>
-              </div>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Сообщение"></textarea>
-              <div class="validate"></div>
-            </div>
-            <div class="mb-3">
-              <div class="loading">Загрузка</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Ваше сообщение отправлено. Спасибо!</div>
-            </div>
-            <div class="text-center"><button type="submit">Отправить</button></div>
-          </form>
-        </div>
+        
 
       </div>
     </section><!-- End Contact Section -->

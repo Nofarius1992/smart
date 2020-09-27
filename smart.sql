@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Сен 25 2020 г., 20:23
--- Версия сервера: 10.4.13-MariaDB
--- Версия PHP: 7.4.7
+-- Время создания: Сен 25 2020 г., 23:28
+-- Версия сервера: 10.4.11-MariaDB
+-- Версия PHP: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -78,7 +78,8 @@ INSERT INTO `orders_3d` (`id`, `user_id`, `service`, `create_at`, `address`, `us
 (4, 1, '', '2020-09-24 06:52:50', '', '', 'Новый', 'в', '', '', '', '', '', '', '', '', '', 0),
 (5, 1, '', '2020-09-24 07:06:54', '', '', 'Новый', 'wer', '', '', '', '', '', '', '', '', '', 0),
 (6, 1, '', '2020-09-24 07:07:43', '', '', 'Новый', 'wer', '', '', '', '', '', '', '', '', '', 0),
-(7, 0, '', '2020-09-25 21:18:59', '', '', 'Новый', 'sdf', 'sdf', 'sdf', 'sdf', 'sdf', 'sdf', 'sdf', 'sdf', '', '', 1);
+(7, 0, '', '2020-09-25 21:18:59', '', '', 'Новый', 'sdf', 'sdf', 'sdf', 'sdf', 'sdf', 'sdf', 'sdf', 'sdf', '', '', 1),
+(8, 0, '', '2020-09-26 00:27:13', '', '', 'Новый', '', '', '', '', '', '', '', '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -88,14 +89,40 @@ INSERT INTO `orders_3d` (`id`, `user_id`, `service`, `create_at`, `address`, `us
 
 CREATE TABLE `orders_vr` (
   `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `equi` varchar(255) NOT NULL,
-  `create_at` datetime NOT NULL DEFAULT current_timestamp(),
-  `type_work` varchar(255) NOT NULL,
-  `user_col` int(11) NOT NULL,
-  `user_age` int(11) NOT NULL,
-  `location` varchar(255) NOT NULL,
-  `status` varchar(255) NOT NULL
+  `description` varchar(255) NOT NULL,
+  `use_type` varchar(255) NOT NULL,
+  `quantity` varchar(255) NOT NULL,
+  `place` varchar(255) NOT NULL,
+  `photo` varchar(255) NOT NULL DEFAULT '0',
+  `balls` varchar(255) NOT NULL DEFAULT '0',
+  `clothes` varchar(255) NOT NULL DEFAULT '0',
+  `eat` varchar(255) NOT NULL DEFAULT '0',
+  `quest` varchar(255) NOT NULL DEFAULT '0',
+  `status` varchar(255) NOT NULL DEFAULT 'новый',
+  `category_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `orders_vr`
+--
+
+INSERT INTO `orders_vr` (`id`, `user_id`, `equi`, `description`, `use_type`, `quantity`, `place`, `photo`, `balls`, `clothes`, `eat`, `quest`, `status`, `category_id`) VALUES
+(1, 0, '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', 'в работу', 0),
+(11, 1, 'Hololens 2', '555', 'Игры', '2', 'Ваша локация', '1', '1', '1', '1', '1', 'новый', 1),
+(12, 1, 'Hololens 2', '5566654q', 'Кинематограф', '3', 'Ваша локация', '1', '1', '1', '1', '1', 'новый', 3),
+(13, 1, 'Hololens 2', '5566654q', 'Кинематограф', '3', 'Ваша локация', '1', '1', '1', '1', '1', 'новый', 3),
+(14, 1, 'Hololens 2', '5566654q', 'Кинематограф', '3', 'Ваша локация', '1', '1', '1', '1', '1', 'новый', 3),
+(16, 1, '', '', '', '1', 'Наш офис', '', '', '', '', '', 'новый', 3),
+(17, 1, '', '', '', '1', 'Наш офис', '', '', '', '', '', 'новый', 2),
+(18, 1, '', '', '', '1', 'Наш офис', '', '', '', '', '', 'новый', 3),
+(19, 1, '', '', '', '1', 'Наш офис', '', '', '', '', '', 'новый', 2),
+(20, 0, '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', 'в работу', 0),
+(21, 1, 'Hololens 2', '555', 'Игры', '2', 'Ваша локация', '1', '1', '1', '1', '1', 'новый', 1),
+(22, 1, 'Hololens 2', '5566654q', 'Кинематограф', '3', 'Ваша локация', '1', '1', '1', '1', '1', 'новый', 3),
+(23, 1, 'Hololens 2', '5566654q', 'Кинематограф', '3', 'Ваша локация', '1', '1', '1', '1', '1', 'новый', 3),
+(24, 1, 'Hololens 2', '5566654q', 'Кинематограф', '3', 'Ваша локация', '1', '1', '1', '1', '1', 'новый', 3);
 
 -- --------------------------------------------------------
 
@@ -132,7 +159,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `login`, `phone`, `email`, `password`, `confirm_mail`, `verified`) VALUES
-(1, 'qwerty', '', 'q@werty.ru', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'LuuW8I5tDqRJ6223eZim', 0);
+(1, 'qwerty', '', 'q@werty.ru', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'LuuW8I5tDqRJ6223eZim', 1);
 
 --
 -- Индексы сохранённых таблиц
@@ -182,13 +209,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT для таблицы `orders_3d`
 --
 ALTER TABLE `orders_3d`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблицы `orders_vr`
 --
 ALTER TABLE `orders_vr`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT для таблицы `services`

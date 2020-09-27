@@ -5,7 +5,7 @@
 ?>
 
 
-<div class="container-fluid" id="form-service">
+<div class="container-fluid" id="form-service" style=" background-color: #fff; width: 1300px; margin-bottom: 100px;">
 	<form method="POST">
 		<div class="row">
 			<div class="col">
@@ -24,6 +24,10 @@
 				  <div class="form-group">
 				    <label for="description">Описание и дополнительно пояснение</label>
 				    <input name="description" class="form-control" id="description">
+				  </div>
+				  <div class="form-group">
+				    <label for="description">Адрес доставки</label>
+				    <input name="address" class="form-control" id="description">
 				  </div>
 			</div>
 
@@ -49,14 +53,7 @@
 							<option>4</option>
 						</select>
 				</div>
-				<div class="form-group">
-					<label for="model">Место проведения</label>
-						<select class="form-control" name="place" id="place">
-							<option>Наш офис</option>
-							<option>Ваша локация</option>
 
-						</select>
-				</div>
 			</div>
 
 			<div class="col">

@@ -23,7 +23,7 @@ include $_SERVER['DOCUMENT_ROOT']."./admin/parts/header.php";
                 <div class="form-row">
                   <table class="table">
                     <thead class=" text-primary">
-                    <th>
+                      <th>
                         Логин
                       </th>
                       <th >
@@ -52,7 +52,6 @@ include $_SERVER['DOCUMENT_ROOT']."./admin/parts/header.php";
                       while ($row = mysqli_fetch_assoc($result)) { 
                       ?>
                         <tr>
-                        <tr>
                           <td style="max-width: 200px;">
                           <?php echo $row['login'] ?>
                           </td>
@@ -71,8 +70,11 @@ include $_SERVER['DOCUMENT_ROOT']."./admin/parts/header.php";
                           <td style="max-width: 900px;">
                             <?php echo $row['email'] ?>
                           </td>
-                          <td>
+                          <!-- <td style="max-width: 200px;">
+                          <a href="edit_user.php?id=<?php echo $row['id'] ?>">ИЗМЕНИТЬ</a>
+                          </td> -->
 
+                          <td>
                              <?php 
                         		if($row['admin_param'] == 'User') {
                         			?>
@@ -86,7 +88,7 @@ include $_SERVER['DOCUMENT_ROOT']."./admin/parts/header.php";
 									</form>
 
 
-								<?php
+                  <?php
 									if(isset($_POST['admin_param'])) {
 										$sql = "UPDATE `users` SET `admin_param` = '" . $_POST['admin_param'] . "' WHERE `users`.`id` =" . $_POST["orderId"];
 										if ($conn->query($sql)) {
@@ -138,6 +140,7 @@ include $_SERVER['DOCUMENT_ROOT']."./admin/parts/header.php";
     </div>
   </div>
 
+<!-- -->
 
 
 

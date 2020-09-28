@@ -33,7 +33,7 @@ if (isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
 
     
         echo "<script>alert(\"Код верификации отправлен повторно!\");</script>";
-        $link = "<a href='http://bee.local/register.php?u_code=$u_code_c'>CONFIRM</a>";
+        $link = "<a href='http://smart.local/register.php?u_code=$u_code_c'>CONFIRM</a>";
         mail($_POST['email'],'Повторная верификация', $link);
 
 

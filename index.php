@@ -32,8 +32,18 @@
                     </div> 
                   </div>
                 </div>
-
+                <?php
+                if (isset($_COOKIE["polzovatel_id"])) {
+                  ?>
                 <a href="/services/service-3d.php?category_id=1" class="mt-5 btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
+                <?php
+                } else {
+                  ?>
+                  <a href="/login.php" class="mt-5 btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
+                  <?php
+                }
+                ?>
+                
 
               </div><!-- /.container -->
             </div> <!-- /.carousel-container -->
@@ -58,8 +68,17 @@
                     </div> 
                   </div>
                 </div>
+                <?php
+                if (isset($_COOKIE["polzovatel_id"])) {
+                  ?>
                 <a href="/services/service-vr.php?category_id=2" class="mt-5 btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
-
+                <?php
+                } else {
+                  ?>
+                  <a href="/login.php" class="mt-5 btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
+                  <?php
+                }
+                ?>
               </div><!-- /.container -->
             </div> <!-- /.carousel-container -->
           </div> <!-- ./carousel-item -->
@@ -84,8 +103,19 @@
                     </div> 
                   </div>
                 </div>
+                <?php
+                if (isset($_COOKIE["polzovatel_id"])) {
+                  ?>
+                  <a href="/services/service-vr.php?category_id=3" class="mt-5 btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
+                <?php
+                } else {
+                  ?>
+                  <a href="/login.php" class="mt-5 btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
+                <?php
 
-                <a href="/services/service-vr.php?category_id=3" class="mt-5 btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
+                }
+                ?>
+                
 
               </div><!-- /.container -->
             </div> <!-- /.carousel-container -->

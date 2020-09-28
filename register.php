@@ -42,14 +42,14 @@ if (isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
     // var_dump($password);
 
     //регистрация
-    $sql = "INSERT INTO users(login, password, email, confirm_mail) VALUES ('" . $_POST['user_name']. "', '" . $password . "', '" . $_POST['email']. "', '$u_code')";
+    $sql = "INSERT INTO users(login, password, email, confirm_mail, first_name, second_name, phone) VALUES ('" . $_POST['user_name']. "', '" . $password . "', '" . $_POST['email']. "', '$u_code', '" . $_POST['first_name']. "', '" . $_POST['second_name']. "', '" . $_POST['phone']. "')";
 
     
 
     if ($conn->query($sql)) {
 
         echo "Зарегистрирован";
-        $link = "<a href='http://project1.local/register.php?u_code=$u_code'>CONFIRM</a>";
+        $link = "<a href='http://smart.local/register.php?u_code=$u_code'>CONFIRM</a>";
         mail($_POST['email'],'My Subject', $link);
 
         
@@ -92,7 +92,7 @@ function generateRandomString($length = 10) {
                                 <div>
                                     <form method="POST" >
                                         <div class="form-group">
-                                            <label class="text-success" for="exampleFormControlInput1">ВАШЕ ИМЯ</label>
+                                            <label class="text-success" for="exampleFormControlInput1">ВАШ ЛОГИН</label>
                                             <!-- <input type="hidden" name="user_id" value="1"> -->
                                             <input type="text" class="form-control" name="user_name">
                                         </div>
@@ -100,6 +100,22 @@ function generateRandomString($length = 10) {
                                             <label class="text-success" for="exampleFormControlInput1">ВАШ ПАРОЛЬ</label>
                                             <input type="password" class="form-control" name="pass" >
                                         </div>
+
+                                        <div class="form-group">
+                                            <label class="text-success" for="exampleFormControlInput1">ВАШЕ ИМЯ</label>
+                                            <input type="text" class="form-control" name="first_name" >
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="text-success" for="exampleFormControlInput1">ВАША ФАМИЛИЯ</label>
+                                            <input type="text" class="form-control" name="second_name" >
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="text-success" for="exampleFormControlInput1">ВАША ТЕЛЕФОН</label>
+                                            <input type="text" class="form-control" name="phone" >
+                                        </div>
+
                                         <div class="form-group">
                                             <label class="text-success" for="exampleFormControlInput1">Email address</label>
                                             <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="name@example.com">

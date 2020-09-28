@@ -33,7 +33,9 @@
                   </div>
                 </div>
 
-                <a href="/services/service-3d.php?category_id=1" class="mt-5 btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
+                      <a href="/services/service-3d.php?category_id=1" class="mt-5 btn-get-started scrollto animate__animated animate__fadeInUp">Хочу</a>
+
+                
 
               </div><!-- /.container -->
             </div> <!-- /.carousel-container -->

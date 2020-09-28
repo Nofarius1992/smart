@@ -13,6 +13,7 @@
                 // var_dump($sql);
                 $row = mysqli_fetch_assoc($result);
                 ?><h4 class="h4"><?php echo $row['first_name']; echo " "; echo $row['second_name']; ?> </h4> 
+            <a class="d-block text-center" href="modules/user/edit_user.php?id=<?php echo $_COOKIE['polzovatel_id']; ?>">Редактировать профиль</a>
 </header>
 <!-- --------------  --> 
 <h5>ТЕХНОЛОГИИ ВИЗУАЛИЗАЦИИ</h5>

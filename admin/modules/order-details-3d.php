@@ -109,7 +109,9 @@ $row = mysqli_fetch_assoc($result);
                                               <div id="other">
                                               <div class="form-group">
                                                 <label for="modeles">Модели</label>
-                                                <h5 class="text-dark-h3" > <?php echo $row['file_modeles'] ?></h5>
+                                                <h5 class="text-dark-h3" > 
+                                                  <a href="download_file.php?name_file=<?php echo $row['file_modeles'] ?>"><?php echo $row['file_modeles'] ?></a>
+                                                </h5>
                                                   <!-- <input type="file" name="modeles" class="form-control-file" id="modeles"> -->
                                                 </div>
                                                 <div class="form-group">

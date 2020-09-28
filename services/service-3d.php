@@ -6,7 +6,7 @@
 
 
 <div class="container-fluid" id="form-service" style=" background-color: #fff; width: 1300px;">
-	<form method="POST">
+	<form enctype="multipart/form-data" method="POST">
 		<div class="row">
 
 			<div class="col">

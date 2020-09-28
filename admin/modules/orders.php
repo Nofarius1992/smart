@@ -11,7 +11,6 @@ include $_SERVER['DOCUMENT_ROOT']."./admin/parts/header.php";
         <div class="row">
           <div class="col-md-12">
             <div class="card">
-<<<<<<< HEAD
                         <div class="card-body">
                                 <nav aria-label="breadcrumb">
                                   <ol class="breadcrumb">
@@ -71,60 +70,41 @@ include $_SERVER['DOCUMENT_ROOT']."./admin/parts/header.php";
                                                                   <?php echo $row['equi'] ?>
                                                                   </td>
                                                                   <td><?php echo $row['data_create']?></td>
-                                                                  <td><a href="../modules/order-details-vr.php?id=<?php echo $row['id'] ?>&user_id=<?php echo $row['user_id'] ?>">смотреть</a></td>
+                                                                  <td><a href="../modules/order-details-vr.php?id=<?php echo $row['id'] ?>&user_id=<?php echo $row['user_id'] ?>">СМОТРЕТЬ</a></td>
                                                                   
-                                                                  <!-- <td><?php echo $row['status']?></td> -->
+                                                                  <td><?php echo $row['status']?></td>
                                                                   
                                             <!--   -->
-                                                                  <td class="col-3 text-center">
-                                                                    <?php 
-
-                                                                    if($row['status'] == 'Новый') {
-                                                                      
-                                                                      ?>
-                                                                      <form method="POST">
-                                                                          <select class="form-control" name="status">
-                                                                            <option><?php echo $row['status'] ?></option>
-                                                                            <option>Принят</option>
-                                                                          </select>
-                                                                          <input name="orderId" type="hidden" value="<?php echo $row["id"]; ?>">
-                                                                          <button type="submit" class="btn btn-primary">Изменить</button>
-                                                                      </form>
-                                                                      <?php
-                                                                      if(isset($_POST['status'])) {
-                                                                        $sql = "UPDATE `orders_vr` SET `status` = '" . $_POST['status'] . "' WHERE `orders_vr`.`id` =" . $_POST["orderId"];
-                                                                        if ($conn->query($sql)) {
-                                                                          header("location:/admin/modules/orders.php");
-                                                                        } else {
-                                                                          echo 'ERROR';
-                                                                        }
-                                                                      }
-                                                                    } else {
-                                                                      ?>
-                                                                      <form method="POST">
-                                                                        <select class="form-control" name="status">
-                                                                          <option><?php echo $row['status'] ?></option>
-                                                                          <option>Новый</option>
-                                                                        </select>
-                                                                        <input name="orderId" type="hidden" value="<?php echo $row["id"]; ?>">
-                                                                        <button type="submit" class="btn btn-primary">Изменить</button>
-                                                                      </form>
-                                                                      <?php 
-
-                                                                        if(isset($_POST['status'])) {
-                                                                        $sql = "UPDATE `orders_vr` SET `status` = '" . $_POST['status'] . "' WHERE `orders_vr`.`id` =" . $_POST["orderId"];
-                                                                        var_dump($sql);
-                                                                          if ($conn->query($sql)) {
-                                                                            header("location:/admin/modules/orders.php");
-                                                                          } else {
-                                                                            echo 'ERROR';
-                                                                          }
-                                                                        }
-                                                                        ?>
+                                                                  <?php
+                                                                        if ($row['status'] == "Новый") {
+                                                                          ?>
+                                                                          <td>
+                                                                          <?php
+                                                                          // echo $row['user_id'];
+                                                                          
+                                                                          ?>
+                                                                            <a href="status_vr.php?id=<?php echo $row['id'] ?>" name="status"  type="button" class="btn float-right">СФОРМИРОВАН</a>
+                                                                          </td>  
+                                                                          <?php
+                                                                      } else {
+                                                                        if ($row['status'] == "Отправлен клиенту") {
+                                                                          ?>
+                                                                          <td>
+                                                                          <div name="status_vr"  class="float-right" style="padding: 11px 49px 11px 50px">ЗАКРЫТ</div>
                                                                           </td>
                                                                           <?php
-                                                                          }
-                                                                          ?>
+                                        
+                                        
+                                                                        } else {
+                                                                                                      
+                                                                        
+                                                                        ?>
+                                                                        <td>
+                                                                        <a href="status_vr.php?id=<?php echo $row['id'] ?>" name="status"  type="button" class="btn float-right" style="padding: 11px 37px 11px 37px">ОТПРАВЛЕН</a>
+                                                                        </td>
+                                                                        <?php }
+                                                                      }
+                                                                            ?>
                                              <!--   -->
                                                                       <td><a href="delete_orders_vr.php?id=<?php echo $row['id'] ?>" name="del"  type="button" class="btn btn-secondary">Удалить</a></td>
                                                                 </tr>
@@ -189,8 +169,40 @@ include $_SERVER['DOCUMENT_ROOT']."./admin/parts/header.php";
                                                                       </td>
 
                                                                       <td><?php echo $row['create_at']?></td>
-                                                                      <td><a href="../modules/order-details-3d.php?id=<?php echo $row['id'] ?>&user_id=<?php echo $row['user_id'] ?>">смотреть</a></td>
+                                                                      <td><a href="../modules/order-details-3d.php?id=<?php echo $row['id'] ?>&user_id=<?php echo $row['user_id'] ?>">СМОТРЕТЬ</a></td>
                                                                       <td><?php echo $row['status']?></td>
+                                                                      <!--   -->
+                                                                      <?php
+                                                                        if ($row['status'] == "Новый") {
+                                                                          ?>
+                                                                          <td>
+                                                                          <?php
+                                                                          // echo $row['user_id'];
+                                                                          
+                                                                          ?>
+                                                                            <a href="status_3d.php?id=<?php echo $row['id'] ?>" name="status"  type="button" class="btn float-right">СФОРМИРОВАН</a>
+                                                                          </td>  
+                                                                          <?php
+                                                                      } else {
+                                                                        if ($row['status'] == "Отправлен клиенту") {
+                                                                          ?>
+                                                                          <td>
+                                                                          <div name="status_vr"  class="float-right" style="padding: 11px 49px 11px 50px">ЗАКРЫТ</div>
+                                                                          </td>
+                                                                          <?php
+                                        
+                                        
+                                                                        } else {
+                                                                                                      
+                                                                        
+                                                                        ?>
+                                                                        <td>
+                                                                        <a href="status_3d.php?id=<?php echo $row['id'] ?>" name="status"  type="button" class="btn float-right" style="padding: 11px 37px 11px 37px">ОТПРАВЛЕН</a>
+                                                                        </td>
+                                                                        <?php }
+                                                                      }
+                                                                            ?>
+                                                                      <!--   -->
                                                                       <td><a href="delete_orders_3d.php?id=<?php echo $row['id'] ?>" name="del"  type="button" class="btn btn-secondary">Удалить</a></td>
                                                                     </tr>
                                                                     <?php
@@ -204,12 +216,6 @@ include $_SERVER['DOCUMENT_ROOT']."./admin/parts/header.php";
                                                         </div>
 
                                                     </div>
-
-
-
-
-
-                          
                         </div>
             </div>
           </div>

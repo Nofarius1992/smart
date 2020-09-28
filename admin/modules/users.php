@@ -36,8 +36,18 @@ include $_SERVER['DOCUMENT_ROOT']."./admin/parts/header.php";
                         Телефон
                       </th>
                       <th>
+                        Имя
+                      </th>
+                      <th>
+                        Фамилия
+                      </th>
+                      <th>
                         Почта
                       </th>
+                      <th>
+                        Телефон
+                      </th>
+                      
                       <th >
                         
                       </th>
@@ -69,62 +79,53 @@ include $_SERVER['DOCUMENT_ROOT']."./admin/parts/header.php";
                             <?php echo $row['phone'] ?>
                           </td>
                           <td style="max-width: 900px;">
+                            <?php echo $row['first_name'] ?>
+                          </td>
+                          <td style="max-width: 900px;">
+                            <?php echo $row['second_name'] ?>
+                          </td>
+                          <td style="max-width: 900px;">
                             <?php echo $row['email'] ?>
                           </td>
+                          <td style="max-width: 900px;">
+                            <?php echo $row['phone'] ?>
+                          </td>
+                          
                           <td>
 
                              <?php 
                         		if($row['admin_param'] == 'User') {
                         			?>
-                        			<form method="POST">
+                        			<form action="products/admin_param.php" method="POST">
 		                            	<select class="form-control" name="admin_param">
-										  <option><?php echo $row['admin_param'] ?></option>
-										  <option>Admin</option>
-										</select>
-										<input name="orderId" type="hidden" value="<?php echo $row["id"]; ?>">
-										<button type="submit" class="btn btn-primary">Изменить</button>
-									</form>
-
-
-								<?php
-									if(isset($_POST['admin_param'])) {
-										$sql = "UPDATE `users` SET `admin_param` = '" . $_POST['admin_param'] . "' WHERE `users`.`id` =" . $_POST["orderId"];
-										if ($conn->query($sql)) {
-											header("location: /admin/modules/users.php");
-										} else {
-											echo 'ERROR';
-										}
-									}
-								} else {
-									?>
-									<form method="POST">
-		                            	<select class="form-control" name="admin_param">
-										  <option><?php echo $row['admin_param'] ?></option>
-										  <option>User</option>
-										</select>
-										<input name="orderId" type="hidden" value="<?php echo $row["id"]; ?>">
-										<button type="submit" class="btn btn-primary">Изменить</button>
-									</form>
-									<?php 
-
-										if(isset($_POST['admin_param'])) {
-										$sql = "UPDATE `users` SET `admin_param` = '" . $_POST['admin_param'] . "' WHERE `users`.`id` =" . $_POST["orderId"];
-											if ($conn->query($sql)) {
-												header("location: /admin/modules/users.php");
-											} else {
-												echo 'ERROR';
-											}
-										}
-
-									}
-								 ?>
+              										  <option><?php echo $row['admin_param'] ?></option>
+              										  <option>Admin</option>
+              										</select>
+              										<input name="orderId" type="hidden" value="<?php echo $row["id"]; ?>">
+              										<button type="submit" class="btn btn-primary">Изменить</button>
+              									</form>
                               <a href="delete_user.php?id=<?php echo $row['id'] ?>" name="del"  type="button" class="btn btn-secondary">Удалить</a>
 
                           </td>
                         </tr>
                       <?php
-                      }
+                      } else {
+                        ?>
+                              <form action="products/admin_param.php" method="POST">
+                                  <select class="form-control" name="admin_param">
+                                    <option><?php echo $row['admin_param'] ?></option>
+                                    <option>User</option>
+                                  </select>
+                                  <input name="orderId" type="hidden" value="<?php echo $row["id"]; ?>">
+                                  <button type="submit" class="btn btn-primary">Изменить</button>
+                                </form>
+                              <a href="delete_user.php?id=<?php echo $row['id'] ?>" name="del"  type="button" class="btn btn-secondary">Удалить</a>
 
+                          </td>
+                        </tr>
+                        <?php  
+                      }
+                    }
                       ?>
                       
                     </tbody>

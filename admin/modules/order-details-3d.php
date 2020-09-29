@@ -116,8 +116,10 @@ $row = mysqli_fetch_assoc($result);
                                                 </div>
                                                 <div class="form-group">
                                                 <label for="document">Документы</label>
-                                                <h5 class="text-dark-h3" > <?php echo $row['file_modeles'] ?></h5>
-                                                  <!-- <input type="file" name="document" class="form-control-file" id="document"> -->
+                                                <h5 class="text-dark-h3" > 
+                                                  <a href="download_file.php?name_file=<?php echo $row['file_document'] ?>"><?php echo $row['file_document'] ?></a>
+                                                </h5>
+                                                 <!-- <input type="file" name="document" class="form-control-file" id="document"> -->
                                                 </div>
 
                                                 </div>

@@ -42,8 +42,7 @@ if (isset($_FILES)){
 			
 			if (move_uploaded_file($_FILES['document']['tmp_name'], $target1) ) {
 			    echo "Файл загружен";
-			    $sql = "INSERT INTO orders_3d (category_id, user_id, model, description, size_model, scale, accuracy, material, platform, packaging, address, file_modeles, file_document) VALUES ( '" . $_GET['category_id'] . "' , '" . $_COOKIE['polzovatel_id'] . "' , '" . $_POST['model'] . "' , '" . $_POST['description'] . "' , '" . $_POST['size_model'] . "' , '" . $_POST['scale'] . "' , '" . $_POST['accuracy'] . "' , '" . $_POST['material'] . "' , '" . $_POST['platform'] . "' , '" . $_POST['packaging'] . "', '" . $_POST['address'] . "', '" . $todb . "', '" . $todb1 . "')";
-			} else {
+			  } else {
 			    echo "Загрузка не прошла";
 			}
 
@@ -52,18 +51,7 @@ if (isset($_FILES)){
 			echo "файла нет";
 
 		}
-
-
-
-
-
-
-
-
-
-
-
-
+		$sql = "INSERT INTO orders_3d (category_id, user_id, model, description, size_model, scale, accuracy, material, platform, packaging, address, file_modeles, file_document) VALUES ( '" . $_GET['category_id'] . "' , '" . $_COOKIE['polzovatel_id'] . "' , '" . $_POST['model'] . "' , '" . $_POST['description'] . "' , '" . $_POST['size_model'] . "' , '" . $_POST['scale'] . "' , '" . $_POST['accuracy'] . "' , '" . $_POST['material'] . "' , '" . $_POST['platform'] . "' , '" . $_POST['packaging'] . "', '" . $_POST['address'] . "', '" . $todb . "', '" . $todb1 . "')";
 		if (mysqli_query($conn, $sql)) {
 			echo "<script>alert(\"ЗАКАЗ ОФОРМЛЕН\"); location.href='/personal.php';</script>";
 			message_to_telegram_tol('Новый заказ 3D!');
